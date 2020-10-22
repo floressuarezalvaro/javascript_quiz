@@ -10,7 +10,9 @@
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./Assets/styles.css" />
   </head>
+
   <nav class="navbar navbar-expand-lg navbar-light bg-primary">
     <span class="navbar-text font-italic text-white">Alvaro Flores Suarez</span>
     <button
@@ -24,6 +26,7 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a
@@ -49,7 +52,37 @@
       </div>
     </div>
   </nav>
+
   <body>
+    <div class="container">
+      <header class="text-center">
+        <h1>Hello World</h1>
+      </header>
+      <div class="intro">
+        <p>
+          How good are you at Javascript? Try this quiz and we'll find out. If
+          you get any of these wrong, dust yourself and try again. Learn how to
+          fail and learn, and you'll be on your way to being a true developer
+          and business partner soon!
+        </p>
+      </div>
+      <div class="time">
+        <div id="minutes">10</div>
+        <div id="seconds">00</div>
+      </div>
+      <div class="button" id="start">
+        <button aria-label="play" id="play">Start</button>
+      </div>
+    </div>
+
+    <div class="card-body text-center">
+      <a
+        href="https://floressuarezalvaro.github.io/my_portfolio/contact.html"
+        class="btn btn-primary"
+        >Contact Me</a
+      >
+    </div>
+    <footer class="card-footer text-muted text-center">10/21/2020</footer>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -65,5 +98,6 @@
       integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
       crossorigin="anonymous"
     ></script>
+    <script src="./app.js"></script>
   </body>
 </html>

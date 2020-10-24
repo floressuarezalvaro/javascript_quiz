@@ -8,8 +8,6 @@ var secondsElapsed = 0;
 var status = "Start";
 var interval;
 
-
-
 function getFormattedMinutes() {
     var secondsLeft = totalSeconds - secondsElapsed;
     var minutesLeft = Math.floor(secondsLeft / 60);
@@ -67,3 +65,101 @@ function renderTime() {
   }
 
 startButton.addEventListener("click", startTimer);
+
+var questions = [
+  {
+    q: "Commonly used data types DO NOT include?",
+    choices: ["Strings", "Booleans", "Alerts", "Numbers"],
+    a: "C"
+  },
+  {
+    q: "The condition in an if / else statement is enclosed within ____.",
+    choices: ["Quotes", "Curly Brackets", "Parenthesis", "Square Brackets"],
+    a: "C"
+  }, 
+  {
+    q: "Arrays in Javascript can be used to store _____.",
+    choices: ["Numbers & Strings", "Other Arrays", "Booleans", "All of the Above"],
+    a: "D"
+  },
+  {
+    q: "String values must be enclosed within ____ when being assigned to variables.",
+    choices: ["Commas", "Curly Brackets", "Quotes", "Parenthesis"],
+    a: "A"
+  },
+  {
+    q: "A very useful tool used during development and debugging for printing content to the debugger is:",
+    choices: ["Javascript", "Terminal/Bash", "For Loops", "Console Log"],
+    a: "D"
+  }
+]
+
+var questionsPointer = 0
+
+var question = document.querySelector("#question")
+var optionA = document.querySelector("#optionA")
+var optionB = document.querySelector("#optionB")
+var optionC = document.querySelector("#optionC")
+var optionD = document.querySelector("#optionD")
+
+
+function setQuestions() {
+
+  if (questionsPointer === questions.length) {
+    clearInterval(interval)
+    alert("Great, you finished with time to spare!")
+    return
+  }
+
+  question.textContent = questions[questionsPointer].q
+  optionA.textContent = questions[questionsPointer].choices[0]
+  optionB.textContent = questions[questionsPointer].choices[1]
+  optionC.textContent = questions[questionsPointer].choices[2]
+  optionD.textContent = questions[questionsPointer].choices[3]
+}
+
+setQuestions()
+
+optionA.addEventListener("click", function () {
+  if (optionA.getAttribute("data-answer") === questions[questionsPointer].a) {
+    console.log("This is correct")
+    questionsPointer++
+    setQuestions()
+  } else {
+    console.log("wrong")
+    totalSeconds -= 10
+  }
+})
+
+optionB.addEventListener("click", function () {
+  if (optionB.getAttribute("data-answer") === questions[questionsPointer].a) {
+    console.log("This is correct")
+    questionsPointer++
+    setQuestions()
+  } else {
+    console.log("wrong")
+    totalSeconds -= 10
+  }
+})
+
+optionC.addEventListener("click", function () {
+  if (optionC.getAttribute("data-answer") === questions[questionsPointer].a) {
+    console.log("This is correct")
+    questionsPointer++
+    setQuestions()
+  } else {
+    console.log("wrong")
+    totalSeconds -= 10
+  }
+})
+
+optionD.addEventListener("click", function () {
+  if (optionD.getAttribute("data-answer") === questions[questionsPointer].a) {
+    console.log("This is correct")
+    questionsPointer++
+    setQuestions()
+  } else {
+    console.log("wrong")
+    totalSeconds -= 10
+  }
+})

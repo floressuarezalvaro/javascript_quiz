@@ -1,6 +1,7 @@
 var startButton = document.querySelector("#start");
 var minutesDisplay = document.querySelector("#minutes");
 var secondsDisplay = document.querySelector("#seconds");
+var questionsDisplay = document.querySelector("#showQs");
 
 
 var totalSeconds = 0;
@@ -38,6 +39,8 @@ function setTime() {
 }
 function startTimer() {
     setTime(); 
+    setQuestions();
+    questionsDisplay.style.display = "block";
     if (totalSeconds > 0) {
         interval = setInterval(function() {
           secondsElapsed++;
@@ -51,6 +54,7 @@ function renderTime() {
     // When renderTime is called it sets the textContent for the timer html...
     minutesDisplay.textContent = getFormattedMinutes();
     secondsDisplay.textContent = getFormattedSeconds();
+    localStorage.setItem("Minutes", JSON.stringify(minutesDisplay))
   
    // ..and then checks to see if the time has run out
     if (secondsElapsed >= totalSeconds) {
@@ -104,21 +108,18 @@ var optionD = document.querySelector("#optionD")
 
 
 function setQuestions() {
-
   if (questionsPointer === questions.length) {
     clearInterval(interval)
-    alert("Great, you finished with time to spare!")
+    var initials = prompt(`All Done! Enter your intials and we'll save your score!`);
+    localStorage.setItem("Initials", initials);
     return
   }
-
   question.textContent = questions[questionsPointer].q
   optionA.textContent = questions[questionsPointer].choices[0]
   optionB.textContent = questions[questionsPointer].choices[1]
   optionC.textContent = questions[questionsPointer].choices[2]
   optionD.textContent = questions[questionsPointer].choices[3]
 }
-
-setQuestions()
 
 optionA.addEventListener("click", function () {
   if (optionA.getAttribute("data-answer") === questions[questionsPointer].a) {

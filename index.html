@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Alvaro - Javascript Quiz</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -56,7 +56,7 @@
   <body>
     <div class="container">
       <header class="text-center">
-        <h1>Hello World</h1>
+        <h1>Welcome, You Are</h1>
       </header>
       <div class="intro">
         <p>
@@ -66,14 +66,20 @@
           and business partner soon!
         </p>
       </div>
-      <div class="time">
-        <div id="minutes">10</div>
-        <div id="seconds">00</div>
-      </div>
-      <div class="button" id="start">
-        <button aria-label="play" id="play">Start</button>
-      </div>
     </div>
+
+    <div id="time" class="text-center">
+      <p>Minutes: <span id="minutes">10</span></p>
+      <p>Seconds: <span id="seconds">00</span></p>
+      <button class="btn btn-success" id="start">Start Quiz</button>
+    </div>
+
+    <h1 id="question"></h1>
+    <ul>
+      <li id="optionA" data-answer="A"></li>
+      <li id="optionB" data-answer="B"></li>
+      <li id="optionC" data-answer="C"></li>
+    </ul>
 
     <div class="card-body text-center">
       <a

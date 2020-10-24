@@ -2,7 +2,7 @@
 
 ## Repository
 
-This page is meant to challenge your javascript knowledge.
+This webpage is meant to challenge your javascript knowledge. You'll put through a series of questions, and will also be timed. I've added this to my portfolio so feel free to also browse around and don't hestitate to contact me!
 
 Below I'll include a screenshot of what the page looks like.
 ![Generated Password 1](./Assets/jQuiz.png)

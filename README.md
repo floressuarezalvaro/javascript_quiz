@@ -2,7 +2,11 @@
 
 ## Repository
 
-This webpage is meant to challenge your javascript knowledge. You'll put through a series of questions, and will also be timed. I've added this to my portfolio so feel free to also browse around and don't hestitate to contact me!
+This webpage is meant to challenge your javascript knowledge. I've also thrown a Yoda theme to spice things up.
+
+On this page, you'll be put through a series of 5 different questions, while also being timed. Any time you respond incorrectly, 10 seconds are deducted from the timer... no pressure though. The galaxy only depends on you!
+
+I've added this to my portfolio so feel free to also browse around and don't hestitate to contact me!
 
 Below I'll include a screenshot of what the page looks like.
 ![Generated Password 1](./Assets/jQuiz.png)

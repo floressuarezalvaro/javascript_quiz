@@ -89,7 +89,7 @@ var questions = [
   {
     q: "String values must be enclosed within ____ when being assigned to variables.",
     choices: ["Commas", "Curly Brackets", "Quotes", "Parenthesis"],
-    a: "A"
+    a: "C"
   },
   {
     q: "A very useful tool used during development and debugging for printing content to the debugger is:",

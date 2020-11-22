@@ -30,6 +30,7 @@ function getFormattedSeconds() {
       formattedSeconds = secondsLeft;
     }
     return formattedSeconds;
+    
 }
 
 function setTime() {
@@ -54,7 +55,6 @@ function renderTime() {
     // When renderTime is called it sets the textContent for the timer html...
     minutesDisplay.textContent = getFormattedMinutes();
     secondsDisplay.textContent = getFormattedSeconds();
-    localStorage.setItem("Minutes", JSON.stringify(minutesDisplay))
   
    // ..and then checks to see if the time has run out
     if (secondsElapsed >= totalSeconds) {
@@ -109,9 +109,11 @@ var optionD = document.querySelector("#optionD")
 
 function setQuestions() {
   if (questionsPointer === questions.length) {
+    var timeString = Number(JSON.stringify(minutesDisplay))
+    localStorage.setItem("Minutes", timeString)
     clearInterval(interval)
     var initials = prompt(`All Done! Enter your intials and we'll save your score!`);
-    localStorage.setItem("Initials", initials);
+    var getInitials = localStorage.setItem("Initials", initials);
     return
   }
   question.textContent = questions[questionsPointer].q

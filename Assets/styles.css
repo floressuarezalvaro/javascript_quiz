@@ -10,3 +10,8 @@
   max-height: 400px;
   padding-bottom: 15px;
 }
+#timerEl {
+  padding-bottom: 10px;
+  border-color: green;
+  border-style: solid;
+}

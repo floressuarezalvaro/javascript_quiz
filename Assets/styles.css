@@ -2,6 +2,10 @@
 #showQs {
   display: none;
 }
+#feedbackTrig {
+  display: none;
+} 
+
 #yodaImage {
   max-height: 400px;
   padding-bottom: 15px;

@@ -2,7 +2,7 @@ var startButton = document.querySelector("#start");
 var minutesDisplay = document.querySelector("#minutes");
 var secondsDisplay = document.querySelector("#seconds");
 var questionsDisplay = document.querySelector("#showQs");
-
+var responseDisplay = document.querySelector("#feedbackTrig");
 
 var totalSeconds = 0;
 var secondsElapsed = 0;
@@ -125,44 +125,59 @@ function setQuestions() {
 
 optionA.addEventListener("click", function () {
   if (optionA.getAttribute("data-answer") === questions[questionsPointer].a) {
-    console.log("This is correct")
+    correctAlert()
     questionsPointer++
     setQuestions()
   } else {
-    console.log("wrong")
+    incorrectAlert()
     totalSeconds -= 10
   }
 })
 
 optionB.addEventListener("click", function () {
   if (optionB.getAttribute("data-answer") === questions[questionsPointer].a) {
-    console.log("This is correct")
+    correctAlert()
     questionsPointer++
     setQuestions()
   } else {
-    console.log("wrong")
+    incorrectAlert()
     totalSeconds -= 10
   }
 })
 
 optionC.addEventListener("click", function () {
   if (optionC.getAttribute("data-answer") === questions[questionsPointer].a) {
-    console.log("This is correct")
+    correctAlert()
     questionsPointer++
     setQuestions()
   } else {
-    console.log("wrong")
+    incorrectAlert()
     totalSeconds -= 10
   }
 })
 
 optionD.addEventListener("click", function () {
   if (optionD.getAttribute("data-answer") === questions[questionsPointer].a) {
-    console.log("This is correct")
+    correctAlert()
     questionsPointer++
     setQuestions()
   } else {
-    console.log("wrong")
+    incorrectAlert()
     totalSeconds -= 10
   }
 })
+
+correctAlert = () => {
+  responseDisplay.style.display = "block";
+  responseDisplay.classList.remove("alert-danger");
+  responseDisplay.classList.add("alert-success");
+  responseDisplay.textContent = "Correct!";
+} 
+
+incorrectAlert = () => {
+  responseDisplay.style.display = "block";
+  responseDisplay.classList.remove("alert-success");
+  responseDisplay.classList.add("alert-danger");
+  responseDisplay.textContent = "Incorrect!";
+  
+} 
